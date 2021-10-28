@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_partner_form_fel_cr" model="ir.ui.view">
+            <field name="name">res.partner.form.fel_cr</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="vat" position="after">
+                        <field name="nombre_facturacion_fel"/>
+                        <field name="tipo_identificacion_fel"/>
+                        <field name="nombre_comercial_fel"/>
+                        <field name="provincia_fel"/>
+                        <field name="canton_fel"/>
+                        <field name="distrito_fel"/>
+                        <field name="barrio_fel"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</odoo>

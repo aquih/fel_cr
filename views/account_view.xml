@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <record model="ir.ui.view" id="invoice_form_fel_cr">
+            <field name="name">account.move.form.fel_cr</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="narration" position="before">
+                        <group>
+                            <group>
+                                <field name="consecutivo_fel"/>
+                                <field name="clave_numerica_fel"/>
+                                <field name="factura_original_id"/>
+                            </group>
+                        </group>
+                    </field>
+                </data>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="journal_form_fel_cr">
+            <field name="name">account.journal.form.fel_cr</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Extra">
+                        <group name="extra" string="Extra">
+                            <group string="Factura Electrónica">
+                                <field name="generar_cr_fel"/>
+                                <field name="tipo_documento_cr_fel"/>
+                                <field name="codigo_actividad_fel"/>
+                                <field name="error_en_historial_fel"/>
+                                <field name="contingencia_fel"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_company_form_fel_cr">
+            <field name="name">res.company.form.fel_cr</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <notebook position="inside">
+                        <page name="extra" string="Extra">
+                            <group string="Factura Electrónica">
+                                <group>
+                                    <field name="certificador_cr_fel"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </data>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="product_template_only_form_view_fel_cr">
+            <field name="name">product.template.product.form.fel_cr</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="barcode" position="after">
+                        <field name="codigo_cabys_fel"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="product_uom_form_view_fel_cr">
+            <field name="name">om.uom.form.fel_cr</field>
+            <field name="model">uom.uom</field>
+            <field name="inherit_id" ref="uom.product_uom_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="uom_type" position="after">
+                        <field name="codigo_fel"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+        
+    </data>
+</openerp>
