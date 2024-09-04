@@ -86,6 +86,19 @@
                 </data>
             </field>
         </record>
+
+	<record id="product_uom_categ_form_view_fel_cr_gti" model="ir.ui.view">
+            <field name="name">uom.category.form.fel_cr_gti</field>
+            <field name="model">uom.category</field>
+            <field name="inherit_id" ref="uom.product_uom_categ_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <tree position="inside">
+                        <field name="codigo_fel"/>
+                    </tree>
+                </data>
+            </field>
+        </record>
         
     </data>
 </openerp>
