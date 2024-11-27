@@ -18,6 +18,10 @@ class AccountMove(models.Model):
     clave_numerica_fel = fields.Char('Serie FE', copy=False)
     factura_original_id = fields.Many2one('account.move', string="Factura original FE", domain="[('invoice_date', '!=', False)]")
     certificador_fel = fields.Char('Certificador FE', copy=False)
+    pdf_fel = fields.Binary('PDF FE', copy=False)
+    pdf_fel_name = fields.Char('Nombre PDF FE', default='pdf_fel.pdf', size=32)
+    xml_fel = fields.Binary('XML FE', copy=False)
+    xml_fel_name = fields.Char('Nombre XML FE', default='xml_fel.xml', size=32)
     
     def error_certificador(self, error):
         self.ensure_one()

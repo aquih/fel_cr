@@ -15,6 +15,12 @@
                                 <field name="clave_numerica_fel"/>
                                 <field name="factura_original_id"/>
                             </group>
+                            <group>
+                                <field name="pdf_fel_name" invisible="1"/>
+                                <field name="pdf_fel" readonly="1" filename="pdf_fel_name"/>
+                                <field name="xml_fel_name" invisible="1"/>
+                                <field name="xml_fel" readonly="1" filename="xml_fel_name"/>
+                            </group>
                         </group>
                     </field>
                 </data>
