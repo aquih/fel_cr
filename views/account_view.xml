@@ -30,8 +30,8 @@
         <field name="inherit_id" ref="account.view_account_journal_form"/>
         <field name="arch" type="xml">
             <notebook position="inside">
-                <page string="Extra">
-                    <group name="extra" string="Extra">
+                <page string="Extra CR">
+                    <group name="extra" string="Extra CR">
                         <group string="Factura Electrónica">
                             <field name="generar_cr_fel"/>
                             <field name="tipo_documento_cr_fel"/>
@@ -51,8 +51,8 @@
         <field name="inherit_id" ref="base.view_company_form"/>
         <field name="arch" type="xml">
             <notebook position="inside">
-                <page name="extra" string="Extra">
-                    <group string="Factura Electrónica">
+                <page name="extra" string="Extra CR">
+                    <group string="Factura Electrónica CR">
                         <group>
                             <field name="certificador_cr_fel"/>
                         </group>
