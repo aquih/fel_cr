@@ -98,11 +98,9 @@
             <field name="model">uom.category</field>
             <field name="inherit_id" ref="uom.product_uom_categ_form_view"/>
             <field name="arch" type="xml">
-                <data>
-                    <tree position="inside">
-                        <field name="codigo_fel"/>
-                    </tree>
-                </data>
+                <field name="rounding" position="after">
+                    <field name="codigo_fel"/>
+                </field>
             </field>
         </record>
         
