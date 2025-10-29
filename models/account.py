@@ -35,11 +35,8 @@ class AccountMove(models.Model):
         self.ensure_one()
         factura = self
         requiere = factura.is_invoice() and factura.journal_id.generar_cr_fel and factura.amount_total != 0
-        logging.warn(requiere)
         if certificador:
-            logging.warn(factura.company_id.certificador_cr_fel)
             requiere = requiere and ( factura.company_id.certificador_cr_fel == certificador or not factura.company_id.certificador_cr_fel)
-        logging.warn(requiere)
         return requiere
 
     def error_pre_validacion_cr(self):
