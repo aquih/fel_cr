@@ -6,7 +6,7 @@
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_move_form"/>
         <field name="arch" type="xml">
-            <field name="narration" position="before">
+            <xpath expr="//page[@id='invoice_tab']" position="inside">
                 <group>
                     <group>
                         <field name="consecutivo_fel"/>
@@ -20,7 +20,7 @@
                         <field name="xml_fel" readonly="1" filename="xml_fel_name"/>
                     </group>
                 </group>
-            </field>
+            </xpath>
         </field>
     </record>
     

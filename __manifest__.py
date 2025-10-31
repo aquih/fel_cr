@@ -2,7 +2,7 @@
 
 {
     'name': 'FEL Costa Rica',
-    'version': '2.1',
+    'version': '2.22',
     'category': 'Custom',
     'description': """ Campos y funciones base para la facturación electrónica en Costa Rica """,
     'author': 'aquíH',
